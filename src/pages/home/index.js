@@ -1,8 +1,18 @@
 import styled from "styled-components";
 import GalleryItem from "./galleryItem";
 import defaultImage from "../../assets/gallery/1.jpg";
+import { useMediaQuery } from "react-responsive";
+import { useEffect } from "react";
 
 function HomePage() {
+    const isPc = useMediaQuery({
+        query: `(min-width: 768px)`,
+    });
+
+    useEffect(() => {
+        console.log(isPc);
+    }, [isPc]);
+
     const dummy = [
         {
             image: defaultImage,
@@ -70,7 +80,7 @@ function HomePage() {
     ];
 
     return (
-        <HomePageStyle>
+        <HomePageStyle isPC={isPc}>
             <p className="result-title">122,313,231 Result</p>
             <div className="gallery-container">
                 {dummy.map((item, index) => (
@@ -85,12 +95,12 @@ const HomePageStyle = styled.div`
     width: 100%;
     font-size: 1rem;
     padding: 0 3.125rem;
-    padding-bottom: 3.125rem;
     box-sizing: border-box;
+    ${(props) => (props.isPC ? "" : "padding : 0 1rem;")}
+    padding-bottom: 3.125rem;
 
     .result-title {
         padding: 1.125rem 0;
-        font-weight: bold;
     }
 
     .gallery-container {
@@ -98,9 +108,11 @@ const HomePageStyle = styled.div`
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 2.125rem;
         grid-row-gap: 2.5rem;
-
-        /* display: flex;
-        justify-content: space-between;
+        ${(props) =>
+            props.isPC
+                ? ""
+                : "grid-template-columns: repeat(1, 1fr)"}/* display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 2.125rem;
         row-gap: 2.5rem; */

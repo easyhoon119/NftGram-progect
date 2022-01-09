@@ -126,10 +126,15 @@ table {
     border-spacing: 0;
 }
 
-/* * {
-    font-family: "Press Start 2P", cursive;
+/* @font-face {
+    font-family: "pusab";
+    src: url("./font/8-bit-pusab-reset.ttf") format("truetype");
+}
+
+* {
+    font-family: "pusab";
 }
 
 html {
-    font-family: "Press Start 2P", cursive;
+    font-family: "pusab";
 } */
