@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 import { NowCategoryAction } from "../store/action/nowCategoryAction";
+import { useNavigate } from "react-router-dom";
 
 function HeaderCategory() {
     const dispatch = useDispatch();
     //현재 카테고리
     const { nowCategory } = useSelector((state) => state.NowCategoryReducer);
+    const navigate = useNavigate();
 
     //현재 카테고리 변경
     const handleCategory = (data) => {

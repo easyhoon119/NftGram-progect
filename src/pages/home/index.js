@@ -2,6 +2,8 @@ import styled from "styled-components";
 import GalleryItem from "./galleryItem";
 import defaultImage from "../../assets/gallery/1.jpg";
 import { useMediaQuery } from "react-responsive";
+import HeaderRecent from "../../components/headerRecent";
+import HeaderGalleryView from "../../components/headerGalleryView";
 
 function HomePage() {
     //반응형 작업
@@ -79,6 +81,14 @@ function HomePage() {
     return (
         //홈화면
         <HomePageStyle isPC={isPc}>
+            {isPc ? (
+                ""
+            ) : (
+                <div className="mobile-home-select">
+                    <HeaderRecent where="home" />
+                    <HeaderGalleryView />
+                </div>
+            )}
             <p className="result-title">122,313,231 Result</p>
             {/* 갤러리 리스트 컨테이너 */}
             <div className="gallery-container">
@@ -97,6 +107,14 @@ const HomePageStyle = styled.div`
     box-sizing: border-box;
     ${(props) => (props.isPC ? "" : "padding : 0 1rem;")}
     padding-bottom: 3.125rem;
+
+    .mobile-home-select {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1.125rem;
+    }
 
     .result-title {
         padding: 1.125rem 0;
