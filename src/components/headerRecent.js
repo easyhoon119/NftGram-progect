@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 function HeaderRecent() {
     return (
+        //헤더 최근 리스트 버튼
         <HeaderRecentStyle className="header-recently button">
             RECENTLY LISTED
             <i className="fas fa-sort-down"></i>

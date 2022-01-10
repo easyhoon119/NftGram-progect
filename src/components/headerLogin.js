@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 function HeaderLogin() {
     return (
+        //헤더 로그인 버튼
         <HeaderLoginStyle className="header-login">
             <p className="button">LOGIN</p>
         </HeaderLoginStyle>

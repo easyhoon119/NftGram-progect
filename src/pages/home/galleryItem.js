@@ -5,6 +5,7 @@ import like from "../../assets/ic-home-like.png";
 
 function GalleryItem({ data }) {
     return (
+        //갤러리 아이템
         <GalleryItemStyle>
             <div className="gallery-image">
                 <img src={data.image} alt="default" />

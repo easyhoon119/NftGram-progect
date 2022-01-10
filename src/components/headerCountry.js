@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 function HeaderCountry() {
     return (
+        //각 나라 언어 선택
         <HeaderCountryStyle className="header-first-inner">
             <div className="america">
                 <img src={america} alt="america" />

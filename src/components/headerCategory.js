@@ -4,8 +4,10 @@ import { NowCategoryAction } from "../store/action/nowCategoryAction";
 
 function HeaderCategory() {
     const dispatch = useDispatch();
+    //현재 카테고리
     const { nowCategory } = useSelector((state) => state.NowCategoryReducer);
 
+    //현재 카테고리 변경
     const handleCategory = (data) => {
         dispatch(
             NowCategoryAction({
@@ -15,6 +17,7 @@ function HeaderCategory() {
     };
 
     return (
+        // 헤더 카테고리
         <HeaderCategoryStyle className="header-second-inner-category">
             <CategoryStyle
                 now={nowCategory}

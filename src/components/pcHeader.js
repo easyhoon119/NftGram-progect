@@ -9,6 +9,7 @@ import nftLogo from "../assets/ic-nftgram-logo.png";
 
 function PcHeader() {
     return (
+        //Pc 헤더
         <PcHeaderStyle>
             <div className="header-first header-padding">
                 <HeaderCountry />

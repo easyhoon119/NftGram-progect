@@ -4,6 +4,7 @@ import gallery from "../assets/ic-header-gallery.png";
 
 function HeaderGalleryView() {
     return (
+        //갤러리 & view 버튼
         <HeaderGalleryViewStyle>
             <img src={view} alt="view" />
             <img src={gallery} alt="gallery" />
@@ -18,6 +19,7 @@ const HeaderGalleryViewStyle = styled.div`
     img {
         width: 2.278rem;
         height: 2.175rem;
+        cursor: pointer;
 
         &:first-child {
             margin-right: 0.75rem;

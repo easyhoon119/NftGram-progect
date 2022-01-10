@@ -3,6 +3,7 @@ import search from "../assets/ic-header-search.png";
 
 function HeaderInput() {
     return (
+        // 헤더 input 창
         <HeaderInputStyle>
             <div className="header-input">
                 <img src={search} alt="search" />

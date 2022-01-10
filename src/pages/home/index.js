@@ -2,17 +2,14 @@ import styled from "styled-components";
 import GalleryItem from "./galleryItem";
 import defaultImage from "../../assets/gallery/1.jpg";
 import { useMediaQuery } from "react-responsive";
-import { useEffect } from "react";
 
 function HomePage() {
+    //반응형 작업
     const isPc = useMediaQuery({
         query: `(min-width: 768px)`,
     });
 
-    useEffect(() => {
-        console.log(isPc);
-    }, [isPc]);
-
+    //홈 갤러리 더미데이터
     const dummy = [
         {
             image: defaultImage,
@@ -80,8 +77,10 @@ function HomePage() {
     ];
 
     return (
+        //홈화면
         <HomePageStyle isPC={isPc}>
             <p className="result-title">122,313,231 Result</p>
+            {/* 갤러리 리스트 컨테이너 */}
             <div className="gallery-container">
                 {dummy.map((item, index) => (
                     <GalleryItem key={index} data={item} />

@@ -7,6 +7,7 @@ import HeaderInput from "./headerInput";
 
 function MobileHeader() {
     return (
+        //모바일 헤더
         <MobileHeaderStyle>
             <div className="header-first header-padding">
                 <HeaderCountry />

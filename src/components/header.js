@@ -4,14 +4,17 @@ import MobileHeader from "./mobileHeader";
 import PcHeader from "./pcHeader";
 
 function Header() {
+    //반응형 작업
     const isPc = useMediaQuery({
         query: `(min-width: 768px)`,
     });
 
     return (
         <HeaderStyle>
+            {/* Pc화면 */}
             {isPc && <PcHeader />}
 
+            {/* Mobile화면 */}
             {!isPc && <MobileHeader />}
         </HeaderStyle>
     );
