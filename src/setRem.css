@@ -1,6 +1,6 @@
 /* Mobile 반응형 */
 
-@media screen and (max-width: 325px) {
+/* @media screen and (max-width: 325px) {
     html {
         font-size: 14.5px;
     }
@@ -47,6 +47,12 @@
 @media screen and (min-width: 500px) and (max-width: 767px) {
     html {
         font-size: 21px;
+    }
+} */
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
     }
 }
 

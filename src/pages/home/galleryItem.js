@@ -3,10 +3,10 @@ import profile from "../../assets/ic-home-profile.png";
 import price from "../../assets/ic-home-price.png";
 import like from "../../assets/ic-home-like.png";
 
-function GalleryItem({ data }) {
+function GalleryItem({ data, isPc }) {
     return (
         //갤러리 아이템
-        <GalleryItemStyle>
+        <GalleryItemStyle isPc={isPc}>
             <div className="gallery-image">
                 <img src={data.image} alt="default" />
             </div>
@@ -39,7 +39,7 @@ const GalleryItemStyle = styled.div`
 
     .gallery-image {
         width: 100%;
-        height: 21.063rem;
+        height: ${(props) => (props.isPc ? "23.063rem" : "29rem")};
         border-radius: 0.313rem;
         display: flex;
         align-items: center;
@@ -72,11 +72,12 @@ const GalleryItemStyle = styled.div`
 
             & > div.explain-userInfo > p:first-child {
                 margin-bottom: 0.188rem;
+                font-size: 1.1rem;
+                font-weight: bold;
             }
 
             & > div.explain-userInfo > p:last-child {
                 font-size: 0.5rem;
-                padding-left: 0.1rem;
             }
         }
 

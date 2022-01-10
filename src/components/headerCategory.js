@@ -10,12 +10,14 @@ function HeaderCategory() {
     const navigate = useNavigate();
 
     //현재 카테고리 변경
-    const handleCategory = (data) => {
+    const handleCategory = (data, url) => {
         dispatch(
             NowCategoryAction({
                 nowCategory: data,
             }),
         );
+
+        navigate(url);
     };
 
     return (
@@ -25,7 +27,7 @@ function HeaderCategory() {
                 now={nowCategory}
                 name="EXPLOLER"
                 onClick={() => {
-                    handleCategory("EXPLOLER");
+                    handleCategory("EXPLOLER", "/");
                 }}>
                 EXPLOLER
             </CategoryStyle>
@@ -33,7 +35,7 @@ function HeaderCategory() {
                 now={nowCategory}
                 name="MY FAVORITE"
                 onClick={() => {
-                    handleCategory("MY FAVORITE");
+                    handleCategory("MY FAVORITE", "/");
                 }}>
                 MY FAVORITE
             </CategoryStyle>
@@ -41,7 +43,7 @@ function HeaderCategory() {
                 now={nowCategory}
                 name="MY COLLECTION"
                 onClick={() => {
-                    handleCategory("MY COLLECTION");
+                    handleCategory("MY COLLECTION", "/");
                 }}>
                 MY COLLECTION
             </CategoryStyle>

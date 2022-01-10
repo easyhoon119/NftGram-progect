@@ -5,7 +5,7 @@ import HeaderInput from "./headerInput";
 import HeaderRecent from "./headerRecent";
 import HeaderCategory from "./headerCategory";
 import HeaderLogin from "./headerLogin";
-import nftLogo from "../assets/ic-nftgram-logo.png";
+import HeaderLogo from "./headerLogo";
 
 function PcHeader() {
     return (
@@ -16,7 +16,7 @@ function PcHeader() {
             </div>
             <div className="header-second header-padding">
                 <div className="header-second-inner">
-                    <img src={nftLogo} alt="logo" />
+                    <HeaderLogo />
                     <div
                         style={{
                             display: "flex",

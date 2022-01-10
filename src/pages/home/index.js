@@ -93,7 +93,7 @@ function HomePage() {
             {/* 갤러리 리스트 컨테이너 */}
             <div className="gallery-container">
                 {dummy.map((item, index) => (
-                    <GalleryItem key={index} data={item} />
+                    <GalleryItem key={index} data={item} isPc={isPc} />
                 ))}
             </div>
         </HomePageStyle>
@@ -101,11 +101,12 @@ function HomePage() {
 }
 
 const HomePageStyle = styled.div`
-    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     font-size: 1rem;
     padding: 0 3.125rem;
     box-sizing: border-box;
-    ${(props) => (props.isPC ? "" : "padding : 0 1rem;")}
+    ${(props) => (props.isPC ? "" : "padding : 0 2rem;")}
     padding-bottom: 3.125rem;
 
     .mobile-home-select {
